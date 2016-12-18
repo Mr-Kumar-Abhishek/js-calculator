@@ -1,3 +1,8 @@
+body {
+	background: #23123a;
+}
+
+
 .calculator {
 	display: block;
 	height: 420px;
@@ -8,3 +13,4 @@
 	background: #484782;
 	border-radius: 20px;
 }
+
