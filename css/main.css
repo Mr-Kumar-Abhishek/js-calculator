@@ -12,7 +12,7 @@ body {
 	margin-top: 15vw;
     background: #140f34;
 	border-radius: 20px;
-    box-shadow: 15px 16px 16px black;
+	box-shadow: 15px 16px 16px #4d4b50;
 }
 
 .cal-title{
