@@ -4,15 +4,15 @@ body {
 
 
 .calculator {
-	display: block;
-	height: 420px;
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 15vw;
-    background: #151227;
-	border-radius: 20px;
-	box-shadow: 15px 16px 16px #4d4b50;
+    display: block;
+    height: 420px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vw;
+    background: #8d78ab;
+    border-radius: 20px;
+    box-shadow: 15px 16px 16px #4d4b50, inset 12px -12px 12px 1.1px #595867;
 }
 
 .cal-title{
