@@ -1,0 +1,9 @@
+.calculator {
+	display: block;
+	height: 420px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15vw;
+	background: #000;
+}
