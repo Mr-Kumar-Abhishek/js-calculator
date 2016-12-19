@@ -21,9 +21,19 @@ function numberInput(){
 	});
 }
 
+function numberClear() {
+	console.log("numberClear() running ...");
+	$(".clearer").click(function(){
+		if ( $(this).attr("value") == "ce" ){
+			  $("#digits-entry").val("0");
+		}
+	});
+}
+
 function calculate() {
 	console.log("Running Calculate");
 	numberInput();
+	numberClear();
 }
 
 
