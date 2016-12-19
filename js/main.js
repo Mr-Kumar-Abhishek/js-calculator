@@ -1,4 +1,6 @@
 
+var eqPushed = false;
+
 function joinInEquation(equation, allDigits, operate){
 	if (equation == "0" || equation == ""){
 		$("#eq-entry").val(allDigits + operate );
@@ -21,7 +23,10 @@ function equate(){
 		
 		if ( firstPartEquation != "0" && lastPartEquation != "0"){
 			var fullEquation = firstPartEquation + lastPartEquation;
-			console.log(fullEquation);
+			$("#eq-entry").val(fullEquation);
+			var ans = math.eval(fullEquation);
+			$("#digits-entry").val(ans);
+			eqPushed = true;
 		}else{
 			console.log("equated on default ...");
 		}
@@ -30,7 +35,7 @@ function equate(){
 
 
 function operatorInput(){
-	console.log("operatorInput() running ....");
+
 	$(".op").click(function(){
 		
 		var operate = $(this).attr("value");
@@ -54,10 +59,24 @@ function numberClear() {
 	});
 }
 
+function totalClear(){
+	$("#digits-entry").val("0");
+	$("#eq-entry").val("0");
+}
+
+function justClear(){
+	$("#eq-entry").val("0");
+}
+
 function numberInput(){
 	console.log("Running Number Input")
 	$(".num").click(function(){
 		console.log("num clicked");
+		
+		if (eqPushed){ 
+			totalClear(); 
+			eqPushed = false;
+		}
 		
 		var digit = $(this).attr("value");
 		console.log(digit);
