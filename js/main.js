@@ -1,3 +1,15 @@
+
+
+function joinInEquation(equation, allDigits, operate){
+	if (equation == "0" || equation == ""){
+		$("#eq-entry").val(allDigits + operate );
+	}else {
+		$("#eq-entry").val( equation + allDigits + operate);
+	}
+}
+
+
+
 function operatorInput(){
 	console.log("operatorInput() running ....");
 	$(".op").click(function(){
@@ -6,11 +18,7 @@ function operatorInput(){
 		var allDigits = $("#digits-entry").val();
 		var equation = $("#eq-entry").val();
 		
-		if (equation == "0" || equation == ""){
-			$("#eq-entry").val(allDigits + operate );
-		}else {
-			$("#eq-entry").val( equation + allDigits + operate);
-		}
+		joinInEquation(equation, allDigits, operate);
 		
 		$("#digits-entry").val("0");
 	});
