@@ -43,3 +43,20 @@ body {
     background: linear-gradient(135deg, rgba(50,48,76,1) 0%,rgba(17,12,50,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#32304c', endColorstr='#110c32',GradientType=1 );
 }
+
+.screen-input {
+    padding: 1px 0px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 90%;
+    text-align: right;
+    font-size: 40px;
+    margin-left: 15px;
+    margin-top: 22px;
+}
+
+.logger {
+	font-size: 20px;
+}
