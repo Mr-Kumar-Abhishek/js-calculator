@@ -79,4 +79,5 @@ button {
     background: #3f315f;
     border-color: #8d73ab;
     outline: none;
+    border-radius: 10px;
 }
