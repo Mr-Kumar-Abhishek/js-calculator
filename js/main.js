@@ -1,3 +1,32 @@
+function operatorInput(){
+	console.log("operatorInput() running ....");
+	$(".op").click(function(){
+		
+		var operate = $(this).attr("value");
+		var allDigits = $("#digits-entry").val();
+		var equation = $("#eq-entry").val();
+		
+		if (equation == "0" || equation == ""){
+			$("#eq-entry").val(allDigits + operate );
+		}else {
+			$("#eq-entry").val( equation + allDigits + operate);
+		}
+		
+		$("#digits-entry").val("0");
+	});
+}
+
+function numberClear() {
+	console.log("numberClear() running ...");
+	$(".clearer").click(function(){
+		if($(this).attr("value") == "ac"){
+			$("#eq-entry").val("0");
+		}
+		
+		$("#digits-entry").val("0");
+	});
+}
+
 function numberInput(){
 	console.log("Running Number Input")
 	$(".num").click(function(){
@@ -21,18 +50,11 @@ function numberInput(){
 	});
 }
 
-function numberClear() {
-	console.log("numberClear() running ...");
-	$(".clearer").click(function(){
-		if ( $(this).attr("value") == "ce" ){
-			  $("#digits-entry").val("0");
-		}
-	});
-}
 
 function calculate() {
 	console.log("Running Calculate");
 	numberInput();
+	operatorInput();
 	numberClear();
 }
 
