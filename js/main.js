@@ -9,10 +9,13 @@ function numberInput(){
 		var digitEntry = $("#digits-entry").val();
 		console.log(digitEntry);
 		
-		if (digit == "." && digitEntry == "") {
+		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "") ) {
 			$("#digits-entry").val( "0" + digit);
 		}
-		else  {
+		else if (digitEntry == "0") {
+			$("#digits-entry").val(digit);
+		}
+		else {
 			$("#digits-entry").val(digitEntry + digit);
 		}
 	});
