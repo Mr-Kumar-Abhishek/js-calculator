@@ -42,7 +42,13 @@ function operatorInput(){
 		var allDigits = $("#digits-entry").val();
 		var equation = $("#eq-entry").val();
 		
-		joinInEquation(equation, allDigits, operate);
+		if (eqPushed){
+			joinInEquation("0", allDigits, operate);
+			eqPushed = false;
+		}
+		else {
+			joinInEquation(equation, allDigits, operate);
+		}
 		
 		$("#digits-entry").val("0");
 	});
