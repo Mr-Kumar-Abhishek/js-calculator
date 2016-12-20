@@ -21,7 +21,7 @@ function equate(){
 		var firstPartEquation = $("#eq-entry").val();
 		var lastPartEquation = $("#digits-entry").val();
 		
-		if ( firstPartEquation != "0" && lastPartEquation != "0"){
+		if ( firstPartEquation != "0" && lastPartEquation != "0" && eqPushed == false){
 			var fullEquation = firstPartEquation + lastPartEquation;
 			$("#eq-entry").val(fullEquation);
 			var ans = math.eval(fullEquation);
