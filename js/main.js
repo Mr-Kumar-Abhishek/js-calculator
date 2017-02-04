@@ -25,7 +25,13 @@ function equate(){
 			var fullEquation = firstPartEquation + lastPartEquation;
 			$("#eq-entry").val(fullEquation);
 			var ans = math.eval(fullEquation);
-			$("#digits-entry").val(ans);
+			var ansOut = ans.toString();
+			if (ansOut.length >= 9 ){
+				$("#digits-entry").val(ansOut.substring(0,8));
+				alert("Answer exceeded the screen size ! The answer displayed is turnicated.");
+			}else{
+				$("#digits-entry").val(ansOut);
+			}
 			eqPushed = true;
 		}else{
 			console.log("equated on default ...");
