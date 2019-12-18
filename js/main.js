@@ -96,10 +96,13 @@ function numberInput(){
 		var digitEntry = $("#display").val();
 		console.log(digitEntry);
 		
-    var dotChecker = RegExp('*.*');
-		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "") || (dotChecker.test(digitEntry) == false)) {
-			$("#display").val( "0" + digit);RegExp('foo*')
+    var dotChecker = RegExp('\.*');
+		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "")) {
+			$("#display").val( "0" + digit);
 		}
+    else if((dotChecker.test(digitEntry) == false)){
+      // do nothing
+    }
 		else if (digitEntry == "0") {
 			$("#display").val(digit);
 		}
