@@ -28,7 +28,7 @@ function equate(){
 			var ansOut = ans.toString();
 			if (ansOut.length >= 9 ){
 				$("#display").val(ansOut.substring(0,8));
-				alert("Answer exceeded the screen size ! The answer displayed is turnicated.");
+				// alert("Answer exceeded the screen size ! The answer displayed is turnicated.");
 			}else{
 				$("#display").val(ansOut);
 			}
