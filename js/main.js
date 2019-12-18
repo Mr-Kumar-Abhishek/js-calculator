@@ -2,7 +2,9 @@
 var eqPushed = false;
 
 function joinInEquation(equation, allDigits, operate){
-	if (equation == "0" || equation == ""){
+	if (allDigits == 0 && operate == "-"){
+		$("#eq-entry").val(equation + operate );
+	}else if (equation == "0" || equation == ""){
 		$("#eq-entry").val(allDigits + operate );
 	}else {
 		$("#eq-entry").val( equation + allDigits + operate);
