@@ -96,8 +96,9 @@ function numberInput(){
 		var digitEntry = $("#display").val();
 		console.log(digitEntry);
 		
-		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "") ) {
-			$("#display").val( "0" + digit);
+    var dotChecker = RegExp('*.*');
+		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "") || (dotChecker.test(digitEntry) == false)) {
+			$("#display").val( "0" + digit);RegExp('foo*')
 		}
 		else if (digitEntry == "0") {
 			$("#display").val(digit);
