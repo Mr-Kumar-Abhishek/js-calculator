@@ -14,7 +14,7 @@ function joinInEquation(equation, allDigits, operate){
 function equate(){
 	console.log("equate() ran...");
 	
-	$("button#equate").click(function(){
+	$("button#equals").click(function(){
 		
 		console.log("equate clicked...");
 		
