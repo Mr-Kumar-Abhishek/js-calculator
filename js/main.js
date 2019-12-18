@@ -19,7 +19,7 @@ function equate(){
 		console.log("equate clicked...");
 		
 		var firstPartEquation = $("#eq-entry").val();
-		var lastPartEquation = $("#digits-entry").val();
+		var lastPartEquation = $("#display").val();
 		
 		if ( firstPartEquation != "0" && lastPartEquation != "0" && eqPushed == false){
 			var fullEquation = firstPartEquation + lastPartEquation;
@@ -27,10 +27,10 @@ function equate(){
 			var ans = math.eval(fullEquation);
 			var ansOut = ans.toString();
 			if (ansOut.length >= 9 ){
-				$("#digits-entry").val(ansOut.substring(0,8));
+				$("#display").val(ansOut.substring(0,8));
 				alert("Answer exceeded the screen size ! The answer displayed is turnicated.");
 			}else{
-				$("#digits-entry").val(ansOut);
+				$("#display").val(ansOut);
 			}
 			eqPushed = true;
 		}else{
@@ -45,7 +45,7 @@ function operatorInput(){
 	$(".op").click(function(){
 		
 		var operate = $(this).attr("value");
-		var allDigits = $("#digits-entry").val();
+		var allDigits = $("#display").val();
 		var equation = $("#eq-entry").val();
 		
 		if (eqPushed){
@@ -56,7 +56,7 @@ function operatorInput(){
 			joinInEquation(equation, allDigits, operate);
 		}
 		
-		$("#digits-entry").val("0");
+		$("#display").val("0");
 	});
 }
 
@@ -67,12 +67,12 @@ function numberClear() {
 			$("#eq-entry").val("0");
 		}
 		
-		$("#digits-entry").val("0");
+		$("#display").val("0");
 	});
 }
 
 function totalClear(){
-	$("#digits-entry").val("0");
+	$("#display").val("0");
 	$("#eq-entry").val("0");
 }
 
@@ -93,17 +93,17 @@ function numberInput(){
 		var digit = $(this).attr("value");
 		console.log(digit);
 		
-		var digitEntry = $("#digits-entry").val();
+		var digitEntry = $("#display").val();
 		console.log(digitEntry);
 		
 		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "") ) {
-			$("#digits-entry").val( "0" + digit);
+			$("#display").val( "0" + digit);
 		}
 		else if (digitEntry == "0") {
-			$("#digits-entry").val(digit);
+			$("#display").val(digit);
 		}
 		else {
-			$("#digits-entry").val(digitEntry + digit);
+			$("#display").val(digitEntry + digit);
 		}
 	});
 }
