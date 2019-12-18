@@ -1,56 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Orbitron" />
-		<link rel="stylesheet" href="css/main.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="calculator">
-			<div class="cal-title">
-				<!-- space for keeping title if any -->
-			</div>
-			<div class="cal-screen">
-				<input id="eq-entry" class="screen-input logger" readonly="true" value="0" type="text">
-				<input id="digits-entry" class="screen-input" readonly="true" value="0" type="text">
-			</div>
-			<div class="keypad">
-				<button class="clearer" value="ac">AC</button>
-				<button class="clearer" value="ce">CE</button>
-				<button class="num" value="7">7</button>
-				<button class="num" value="8">8</button>
-				<button class="num" value="9">9</button>
-				<button class="op" value="+">+</button>
-				<button class="num" value="4">4</button>
-				<button class="num" value="5">5</button>
-				<button class="num" value="6">6</button>
-				<button class="op" value="-">-</button>
-				<button class="num" value="1">1</button>
-				<button class="num"value="2">2</button>
-				<button class="num" value="3">3</button>
-				<button class="op" value="*">x</button>
-				<button class="num" value="0">0</button>
-				<button class="num" value=".">.</button>
-				<button id="equate" value="eq">=</button>
-				<button class="op" value="/">÷</button>
-			</div>
-        </div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.1/math.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+    <div class="calculator">
+      <div class="cal-title">
+        <!-- space for keeping title if any -->
+      </div>
+      <div class="cal-screen">
+        <input
+          id="eq-entry"
+          class="screen-input logger"
+          readonly="true"
+          value="0"
+          type="text"
+        />
+        <input
+          id="digits-entry"
+          class="screen-input"
+          readonly="true"
+          value="0"
+          type="text"
+        />
+      </div>
+      <div class="keypad">
+        <button class="clearer" value="ac">AC</button>
+        <button class="clearer" value="ce">CE</button>
+        <button class="num" value="7">7</button>
+        <button class="num" value="8">8</button>
+        <button class="num" value="9">9</button>
+        <button class="op" value="+">+</button>
+        <button class="num" value="4">4</button>
+        <button class="num" value="5">5</button>
+        <button class="num" value="6">6</button>
+        <button class="op" value="-">-</button>
+        <button class="num" value="1">1</button>
+        <button class="num" value="2">2</button>
+        <button class="num" value="3">3</button>
+        <button class="op" value="*">x</button>
+        <button class="num" value="0">0</button>
+        <button class="num" value=".">.</button>
+        <button id="equate" value="eq">=</button>
+        <button class="op" value="/">÷</button>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.1/math.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>
