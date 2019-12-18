@@ -99,9 +99,9 @@ function numberInput(){
 		if ( (digit == "." && digitEntry == "0") || (digit == "." && digitEntry == "")) {
 			$("#display").val( "0" + digit);
 		}
-  /*  else if( RegExp('\.').test(digitEntry) == true){
-      console.log('did nothing...')
-    }*/
+   		else if( RegExp("[.]").test(digitEntry) == true && digit == "."){
+      		console.log('did nothing...');
+    	}
 		else if (digitEntry == "0") {
 			$("#display").val(digit);
 		}
