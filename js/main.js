@@ -1,7 +1,12 @@
 
 var eqPushed = false;
+function isOP(sample){
+  
+}
 
 function joinInEquation(equation, allDigits, operate){
+  var lastEqChar = equation.slice(equation.length -1);  
+  
 	if (allDigits == 0 && operate == "-"){
 		$("#eq-entry").val(equation + operate );
 	}else if (equation == "0" || equation == ""){
