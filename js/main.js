@@ -1,7 +1,12 @@
 
 var eqPushed = false;
+
 function isOP(sample){
-  
+  if (sample == "-" || sample == "/" || sample == "+" || sample == "*")
+    return true;
+  else {
+    return false;
+  }
 }
 
 function joinInEquation(equation, allDigits, operate){
@@ -11,7 +16,9 @@ function joinInEquation(equation, allDigits, operate){
 		$("#eq-entry").val(equation + operate );
 	}else if (equation == "0" || equation == ""){
 		$("#eq-entry").val(allDigits + operate );
-	}else {
+	}else if (isOP(lastEqChar) == true){
+    $(#)
+  }else {
 		$("#eq-entry").val( equation + allDigits + operate);
 	}
 }
