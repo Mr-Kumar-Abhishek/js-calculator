@@ -10,16 +10,21 @@ function isOP(sample){
 }
 
 function joinInEquation(equation, allDigits, operate){
+  
+  console.log("equation is: " + equation);
+  console.log("allDigits is: " + allDigits);
+  console.log("operate is: " + operate);
+  
   var lastEqChar = equation.slice(equation.length -1);  
   
-  cosl
+  console.log("last char is = " + lastEqChar);
   
 	if (allDigits == 0 && operate == "-"){
 		$("#eq-entry").val(equation + operate );
 	}else if (equation == "0" || equation == ""){
 		$("#eq-entry").val(allDigits + operate );
-	}else if (isOP(lastEqChar) == true && allDigits != 0){
-    $("#eq-entry").val(equation.slice(0, -1) + allDigits + operate);
+	}else if(isOP(lastEqChar) == true && allDigits == 0 && lastEqChar != "-"){
+    $("#eq-entry").val(equation.slice(0, -1) + operate );
   }else {
 		$("#eq-entry").val( equation + allDigits + operate);
 	}
