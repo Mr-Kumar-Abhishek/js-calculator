@@ -19,13 +19,13 @@ function joinInEquation(equation, allDigits, operate) {
 
   if (equation == "0" || equation == "") {
     $("#eq-entry").val(allDigits + operate);
-  } else if (isOP(lastEqChar) == true && allDigits == "0" && operate != "-") {
+  }else if(lastEqChar == "-" && allDigits == "0"){
+        $("#eq-entry").val(equation.slice(0, -2) + operate);
+  }else if (isOP(lastEqChar) == true && allDigits == "0" && operate != "-") {
     $("#eq-entry").val(equation.slice(0, -1) + operate);
   } else if (isOP(lastEqChar) == true && allDigits == "0" && operate == "-") {
     $("#eq-entry").val(equation + operate);
-  } else if(lastEqChar == "-" && allDigits ){
-    
-  }
+  } 
   else {
     $("#eq-entry").val(equation + allDigits + operate);
   }
