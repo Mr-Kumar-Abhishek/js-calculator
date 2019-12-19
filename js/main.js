@@ -17,7 +17,7 @@ function joinInEquation(equation, allDigits, operate){
 	}else if (equation == "0" || equation == ""){
 		$("#eq-entry").val(allDigits + operate );
 	}else if (isOP(lastEqChar) == true){
-    $(#)
+    $("#eq-entry").val(equation.slice(0, -1) + allDigits + operate);
   }else {
 		$("#eq-entry").val( equation + allDigits + operate);
 	}
