@@ -12,11 +12,13 @@ function isOP(sample){
 function joinInEquation(equation, allDigits, operate){
   var lastEqChar = equation.slice(equation.length -1);  
   
+  cosl
+  
 	if (allDigits == 0 && operate == "-"){
 		$("#eq-entry").val(equation + operate );
 	}else if (equation == "0" || equation == ""){
 		$("#eq-entry").val(allDigits + operate );
-	}else if (isOP(lastEqChar) == true){
+	}else if (isOP(lastEqChar) == true && allDigits != 0){
     $("#eq-entry").val(equation.slice(0, -1) + allDigits + operate);
   }else {
 		$("#eq-entry").val( equation + allDigits + operate);
