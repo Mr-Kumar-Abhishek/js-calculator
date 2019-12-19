@@ -15,7 +15,7 @@ function joinInEquation(equation, allDigits, operate){
   console.log("allDigits is: " + allDigits);
   console.log("operate is: " + operate);
   
-  var lastEqChar = equation.slice(equation.length -1);  
+  var lastEqChar = allDigits.slice(allDigits.length -1);  
   
   console.log("last char is = " + lastEqChar);
   
@@ -25,6 +25,8 @@ function joinInEquation(equation, allDigits, operate){
 		$("#eq-entry").val(allDigits + operate );
 	}else if(isOP(lastEqChar) == true && allDigits == 0 && lastEqChar != "-"){
     $("#eq-entry").val(equation.slice(0, -1) + operate );
+  }else if(isOP(lastEqChar) == true && allDigits == 0 && lastEqChar == "-"){
+    $("#eq-entry").val(equation + operate );
   }else {
 		$("#eq-entry").val( equation + allDigits + operate);
 	}
